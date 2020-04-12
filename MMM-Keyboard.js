@@ -49,8 +49,8 @@ Module.register("MMM-Keyboard", {
       self.keyboard.setInput(event.target.value);
     });
     var send = document.createElement("button");
-    send.className = "sendButton";
-    send.innerText = "SEND!";
+    send.className = "OKButton";
+    send.innerText = "OK";
     send.setAttribute("name", "sendButton");
     send.onclick = () => {
       var message = document.getElementById("inputField").value;
@@ -60,9 +60,8 @@ Module.register("MMM-Keyboard", {
       document.getElementById("inputField").value = '';
     };
     var hideButton = document.createElement("button");
-    hideButton.className = "sendButton";
-    hideButton.innerText = "\u21e7";
-    hideButton.style.backgroundColor = "#880000";
+    hideButton.className = "CANCELButton";
+    hideButton.innerText = "ESC";
     hideButton.setAttribute("name", "hideButton");
     hideButton.onclick = () => {
       this.hideKeyboard();
@@ -92,11 +91,6 @@ Module.register("MMM-Keyboard", {
       this.showKeyboard(payload.style);
     }
   },
-
-  itemClicked: function (item) {
-    this.sendSocketNotification("PURCHASED_ITEM", item);
-  },
-
 
   onChange: function(input) {
     document.getElementById("inputField").value = input;
@@ -202,9 +196,9 @@ Module.register("MMM-Keyboard", {
   },
 
   log: function (msg) {
-    if (this.config && this.config.debug) {
+    //if (this.config && this.config.debug) {
       console.log(this.name + ":", JSON.stringify(msg));
-    }
+    //}
   },
 
 });

@@ -2,7 +2,6 @@
   width: 600px;
   margin: 100px auto;
   text-align: center;
-  
 }
 
 .MMM-Keyboard .kbContainer {
@@ -25,7 +24,7 @@
   margin: 10px 5px;
   box-sizing: border-box;
   background-color: black;
-  border: 4px solid white;
+  border: 4px solid #333;
   border-radius: 8px;
   resize: none;
   color: white;
@@ -34,11 +33,24 @@
 .MMM-Keyboard input:focus {
 }
 
-.MMM-Keyboard .sendButton {
-  background-color: #000044;
-  border: 4px solid white;
+.MMM-Keyboard .OKButton {
+  background-color: #fff;
+  border: 0px solid white;
   border-radius: 8px;
-  color: white;
+  color: #333;
+  font-size: 26px;
+  padding: 10px 10px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 10px 5px;
+  min-width: 60px;
+}
+
+.MMM-Keyboard .CANCELButton {
+  background-color: #fff;
+  border: 0px solid white;
+  border-radius: 8px;
+  color: #333;
   font-size: 26px;
   padding: 10px 10px;
   text-decoration: none;
@@ -68,7 +80,7 @@
 .MMM-Keyboard .hg-theme-default .hg-button {
   height: 58px;
   width: 60px;
-  color: #5d7b9d;
+  color: #333;
   font-size: 1em;
   padding: 8px;
   margin: 2px;
