@@ -94,7 +94,7 @@ Module.register("MMM-Keyboard", {
 
   onChange: function(input) {
     document.getElementById("inputField").value = input;
-    //this.log("Input changed", input);
+    console.log("KEYBOARD: Input changed: " + input);
   },
 
   onKeyPress: function(button) {
@@ -183,9 +183,9 @@ Module.register("MMM-Keyboard", {
   },
 
   showKeyboard: function() {
+    this.keyboard.setInput("");
     this.kbContainer.classList.add("show-keyboard");
     document.getElementById("inputDiv").style.display = "block";
-
   },
 
   hideKeyboard: function() {

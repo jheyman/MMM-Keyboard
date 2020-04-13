@@ -61,6 +61,7 @@
 
 .MMM-Keyboard {
   margin: 100px auto;
+  cursor: none;
 }
 
 .MMM-Keyboard .simple-keyboard {
