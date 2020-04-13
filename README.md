@@ -1,19 +1,15 @@
 # MMM-Keyboard
 
+Fork from the original excellent [MMM-Keyboard](https://github.com/lavolp3/MMM-Keyboard) module for the [MagicMirror²](https://github.com/MichMich/MagicMirror/) that creates a virtual keyboard to be used to send commands or text to other modules
+
 ![Example image](keyboard-example.jpg)
-
-A module for the [MagicMirror²](https://github.com/MichMich/MagicMirror/) that creates a virtual keyboard to be used to send commands or text to other modules
-
-## Features
- * Touch Support
- * Locale Support
 
 ## Installing
 
 ### Step 1 - Install the module
 ```javascript
 cd ~/MagicMirror/modules
-git clone https://github.com/lavolp3/MMM-Keyboard.git
+git clone https://github.com/jheyman/MMM-Keyboard.git
 cd MMM-Keyboard
 npm install
 ```
@@ -26,7 +22,6 @@ Add this configuration into your `config.js` file
     position: "fullscreen_above",
     config: {
         style: "default",
-        swipe: false
     }
 }
 ```
@@ -34,24 +29,6 @@ Add this configuration into your `config.js` file
 ## Dependencies
 
 * [simple-keyboard](https://www.npmjs.com/package/simple-keyboard)
-* [swipe-keyboard](https://www.npmjs.com/package/swipe-keyboard)
-
-## Updating
-Go to the module’s folder `/MagicMirror/modules/MMM-Keyboard` and pull the latest version from GitHub:
-```
-git pull
-npm install
-```
-
-## Configuring
-
-
-| Option          | type   | default        | Description
-|-----------------|------  |--------------- |-----------
-| `locale`        | string | "en"           | The locale. **(not implemented yet)**
-| `swipe`         | boolean| false          | Activate swipe mode (experimental!)  **(not implemented yet)**
-| `alwaysShow`    | boolean| false          | Always show keyboard.  **(not implemented yet)**
-| `debug`         | boolean| false          | Debug mode for additional console output. Will also create a keyboard button to activate the keyboard.
 
 
 # Working with the Keyboard
@@ -90,10 +67,3 @@ notificationReceived : function (notification, payload) {
     }
 },
 ```
-
-
-# ToDos
-
-- [ ] include locales ("de", "en");
-- [ ] include styling options
-- [ ] use transition effect to draw keyboard up from bottom or top border
