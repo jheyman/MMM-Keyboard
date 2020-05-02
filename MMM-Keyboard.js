@@ -32,7 +32,7 @@ Module.register("MMM-Keyboard", {
       kbButton.width = "100px";
       kbButton.className = "kbButton fas fa-keyboard";
       kbButton.addEventListener("click", event => {
-        this.showKeyboard();
+        this.showKeyboard(true);
         kbButton.style.display = "none";
       });
       container.appendChild(kbButton);
@@ -88,7 +88,7 @@ Module.register("MMM-Keyboard", {
       console.log("MMM-Keyboard recognized a notification: " + noti + JSON.stringify(payload));
       this.log("Activating Keyboard!");
       this.currentKey = payload.key;
-      this.showKeyboard(payload.style);
+      this.showKeyboard(true);
     }
   },
 
@@ -182,8 +182,10 @@ Module.register("MMM-Keyboard", {
     });
   },
 
-  showKeyboard: function() {
-    this.keyboard.setInput("");
+  showKeyboard: function(clearInput = false) {
+    if (clearInput) {
+      this.keyboard.setInput("");
+    }
     this.kbContainer.classList.add("show-keyboard");
     document.getElementById("inputDiv").style.display = "block";
   },
